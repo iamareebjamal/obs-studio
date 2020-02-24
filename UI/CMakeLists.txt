@@ -232,6 +232,7 @@ set(obs_SOURCES
 	window-basic-preview.cpp
 	window-basic-about.cpp
 	window-importer.cpp
+	media-controls.cpp
 	window-namedialog.cpp
 	window-log-reply.cpp
 	window-projector.cpp
@@ -265,7 +266,8 @@ set(obs_SOURCES
 	qt-wrappers.cpp
 	obs-proxy-style.cpp
 	locked-checkbox.cpp
-	visibility-checkbox.cpp)
+	visibility-checkbox.cpp
+	media-slider.cpp)
 
 set(obs_HEADERS
 	${obs_PLATFORM_HEADERS}
@@ -290,6 +292,7 @@ set(obs_HEADERS
 	window-basic-transform.hpp
 	window-basic-preview.hpp
 	window-importer.hpp
+	media-controls.hpp
 	window-namedialog.hpp
 	window-log-reply.hpp
 	window-projector.hpp
@@ -329,7 +332,8 @@ set(obs_HEADERS
 	audio-encoders.hpp
 	qt-wrappers.hpp
 	clickable-label.hpp
-	obs-proxy-style.hpp)
+	obs-proxy-style.hpp
+	media-slider.hpp)
 
 set(obs_importers_HEADERS
 	importers/importers.hpp)
@@ -362,7 +366,9 @@ set(obs_UI
 	forms/OBSUpdate.ui
 	forms/OBSRemux.ui
 	forms/OBSImporter.ui
-	forms/OBSAbout.ui)
+	forms/OBSAbout.ui
+	forms/OBSAbout.ui
+	forms/MediaControls.ui)
 
 set(obs_QRC
 	forms/obs.qrc)
