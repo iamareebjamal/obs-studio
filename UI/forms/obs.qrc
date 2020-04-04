@@ -34,6 +34,12 @@
     <file>images/sources/text.svg</file>
     <file>images/sources/window.svg</file>
     <file>images/sources/default.svg</file>
+    <file>images/media/media_play.svg</file>
+    <file>images/media/media_pause.svg</file>
+    <file>images/media/media_next.svg</file>
+    <file>images/media/media_previous.svg</file>
+    <file>images/media/media_restart.svg</file>
+    <file>images/media/media_stop.svg</file>
   </qresource>
   <qresource prefix="/settings">
     <file>images/settings/output.svg</file>
