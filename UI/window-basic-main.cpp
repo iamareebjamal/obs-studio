@@ -1752,7 +1752,21 @@ void OBSBasic::OBSInit()
 #endif
 
 	/* setup media controls widget */
-	//MediaControls *controls = new MediaControls();
+	QFrame *controlsDivider = new QFrame(ui->contextSubContainer);
+	controlsDivider->setFrameShape(QFrame::VLine);
+	controlsDivider->setFrameShadow(QFrame::Sunken);
+	ui->contextSubContainer->layout()->addWidget(controlsDivider);
+
+	MediaControls *controls = new MediaControls(ui->contextContainer);
+	controls->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
+	controls->layout()->setContentsMargins(12, 0, 0, 0);
+	ui->contextContainer->layout()->addWidget(controls);
+	controls->show();
+
+	ui->contextSubContainer->setSizePolicy(QSizePolicy::Minimum,
+					       QSizePolicy::Preferred);
+	ui->contextContainer->setSizePolicy(QSizePolicy::Minimum,
+					    QSizePolicy::Preferred);
 
 	const char *dockStateStr = config_get_string(
 		App()->GlobalConfig(), "BasicWindow", "DockState");
